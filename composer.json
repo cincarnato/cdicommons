@@ -17,7 +17,9 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": ">=5.3.3"
+        "php": ">=5.3.3",
+        "cdi/cdicommons": "dev-master",
+        "cdi/cdiuser": "dev-master"
     },
     "autoload": {
         "psr-0": {
