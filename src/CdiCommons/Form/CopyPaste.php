@@ -12,7 +12,7 @@ use Zend\InputFilter\InputFilter;                 // <-- Add this import
 class CopyPaste extends Form {
 
     public function __construct() {
-        parent::__construct('Smtp');
+        parent::__construct('xxx');
         $this->setAttribute('method', 'post');
         $this->setAttribute('class', "form-horizontal");
         $this->setAttribute('role', "form");
