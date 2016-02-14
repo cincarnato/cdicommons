@@ -17,6 +17,7 @@ class BaseEntity extends \CdiCommons\Entity\AbstractEntity  {
      *
      * @Gedmo\Timestampable(on="create")
      * @ORM\Column(type="datetime", name="created_at")
+      * @Annotation\Exclude()
      */
     protected $createdAt;
     /**
@@ -24,6 +25,7 @@ class BaseEntity extends \CdiCommons\Entity\AbstractEntity  {
      *
      * @Gedmo\Timestampable(on="update")
      * @ORM\Column(type="datetime", name="updated_at", nullable=true)
+    * @Annotation\Exclude()
      */
     protected $updatedAt;
 
