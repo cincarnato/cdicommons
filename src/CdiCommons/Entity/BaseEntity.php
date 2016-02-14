@@ -8,7 +8,7 @@ use Doctrine\ORM\PersistentCollection;
 use Doctrine\ORM\Proxy\Proxy;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Zend\InputFilter\InputFilter;
-
+use Zend\Form\Annotation;
 class BaseEntity extends \CdiCommons\Entity\AbstractEntity  {
 
 
