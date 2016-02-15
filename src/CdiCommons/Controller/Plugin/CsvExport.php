@@ -10,7 +10,7 @@
 * @package Paquete
 */
 
-namespace RdnCsv\Controller\Plugin;
+namespace CdiCommons\Controller\Plugin;
 use Zend\Http\PhpEnvironment\Response as HttpResponse;
 use Zend\Mvc\Controller\Plugin\AbstractPlugin;
 /**

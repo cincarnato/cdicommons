@@ -11,7 +11,7 @@
 */
 
 
-namespace RdnCsv\Controller\Plugin;
+namespace CdiCommons\Controller\Plugin;
 use SplFileObject;
 use Zend\Mvc\Controller\Plugin\AbstractPlugin;
 
