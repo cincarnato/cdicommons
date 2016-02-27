@@ -11,9 +11,10 @@ use Zend\InputFilter\InputFilter;
 use Zend\Form\Annotation;
 class ExtendedEntity extends \CdiCommons\Entity\AbstractEntity {
 
-    /**
+   /**
      * 
      * @ORM\ManyToOne(targetEntity="CdiUser\Entity\User")
+     * @ORM\JoinColumn(name="last_updated_by", referencedColumnName="id")
      * @Annotation\Exclude()
      */
     protected $createdBy;
@@ -21,6 +22,7 @@ class ExtendedEntity extends \CdiCommons\Entity\AbstractEntity {
     /**
      * 
      * @ORM\ManyToOne(targetEntity="CdiUser\Entity\User")
+     * @ORM\JoinColumn(name="last_updated_by", referencedColumnName="id")
      * @Annotation\Exclude()
      */
     protected $lastUpdatedBy;
