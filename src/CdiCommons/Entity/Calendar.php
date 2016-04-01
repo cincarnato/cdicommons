@@ -13,11 +13,11 @@ use Zend\Form\Annotation;
 /**
  *
  * @ORM\Entity
- * @ORM\Table(name="cdi_schedule")
+ * @ORM\Table(name="cdi_calendar")
  *
  * @author Cristian Incarnato
  */
-class Schedule extends \CdiCommons\Entity\AbstractEntity {
+class Calendar extends \CdiCommons\Entity\AbstractEntity {
 
     /**
      * @var int
