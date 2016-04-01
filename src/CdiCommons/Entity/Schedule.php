@@ -28,14 +28,17 @@ class Schedule extends \CdiCommons\Entity\AbstractEntity {
      */
     protected $id;
 
-    /**
-     * @var string
-     * @Annotation\Type("Zend\Form\Element\Text")
-     * @Annotation\Options({"label":"Nombre:"})
-     * @Annotation\Validator({"name":"StringLength", "options":{"min":1, "max":25}})
-     * @ORM\Column(type="string", length=25, unique=false, nullable=true)
+     /**
+     * @Annotation\Type("DoctrineModule\Form\Element\ObjectSelect")
+     * @Annotation\Options({
+     * "label":"Calendar:",
+     * "empty_option": "",
+     * "target_class":"CdiCommons\Entity\Calendar",
+     * "property": "id"})
+     * @ORM\ManyToOne(targetEntity="CdiCommons\Entity\Calendar")
+     * @ORM\JoinColumn(name="calendar_id", referencedColumnName="id", onDelete="CASCADE")
      */
-    protected $name;
+    protected $calendar;
 
     /**
      * @Annotation\Type("DoctrineModule\Form\Element\ObjectSelect")
@@ -106,6 +109,16 @@ class Schedule extends \CdiCommons\Entity\AbstractEntity {
     function setEndTime($endTime) {
         $this->endTime = $endTime;
     }
+    
+    function getCalendar() {
+        return $this->calendar;
+    }
+
+    function setCalendar($calendar) {
+        $this->calendar = $calendar;
+    }
+
+
 
 
 }
