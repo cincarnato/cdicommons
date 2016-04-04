@@ -3,7 +3,7 @@
 return array(
     'cdicommons_options' => array(
     ),
-       'view_manager' => array(
+    'view_manager' => array(
         'template_path_stack' => array(
             'cdicommons' => __DIR__ . '/../view',
         ),
@@ -22,7 +22,7 @@ return array(
             'CdiCsv:CsvImport' => false,
         ),
     ),
-     'view_helpers' => array(
+    'view_helpers' => array(
         'invokables' => array(
             'CdiFormElement' => 'CdiCommons\View\Helper\CdiFormElement',
         )
@@ -36,6 +36,24 @@ return array(
             'orm_default' => array(
                 'drivers' => array(
                     'CdiCommons\Entity' => 'cdicommons_entity',
+                ),
+            ),
+        ),
+    ),
+    'router' => array(
+        'routes' => array(
+            'cdierror' => array(
+                'type' => 'segment',
+                'options' => array(
+                    'route' => '/cdierror[/:action]',
+                    'constraints' => array(
+                        'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                        'id' => '[0-9]+',
+                    ),
+                    'defaults' => array(
+                        'controller' => 'CdiCommons\Controller\Error',
+                        'action' => 'index',
+                    ),
                 ),
             ),
         ),
