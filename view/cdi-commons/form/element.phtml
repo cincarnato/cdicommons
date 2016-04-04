@@ -1,18 +1,25 @@
 <div  class="form-group<?php if ($this->formElementErrors($this->element)) echo " has-error" ?>">
-    <?php echo $this->formElement($this->element); ?>
-    <?php if ($element->getOption('description')): ?>
-        <p class="help-block"><?php echo $this->element->getOption('description') ?></p>
-    <?php endif; ?>
+    <div class="col-lg-4">
+        <label class="col-lg-5 control-label"><?php echo $element->getLabel() ?></label>
+    </div>
 
-    <?php if ($this->formElementErrors($this->element)) : ?>
-        <?php
-        // Imprimo los errores
-        echo $this->formElementErrors()
-                ->setMessageOpenFormat('<span class="help-block">')
-                ->setMessageSeparatorString('</span><span class="help-block">')
-                ->setMessageCloseString('</span>')
-                ->render($element);
-        ?>
+    <div class="col-lg-8">
+        <?php echo $this->formElement($this->element); ?>
+        <?php if ($element->getOption('description')): ?>
+            <p class="help-block"><?php echo $this->element->getOption('description') ?></p>
+        <?php endif; ?>
 
-    <?php endif; ?>
+        <?php if ($this->formElementErrors($this->element)) : ?>
+            <?php
+            // Imprimo los errores
+            echo $this->formElementErrors()
+                    ->setMessageOpenFormat('<span class="help-block">')
+                    ->setMessageSeparatorString('</span><span class="help-block">')
+                    ->setMessageCloseString('</span>')
+                    ->render($element);
+            ?>
+
+        <?php endif; ?>
+
+    </div>
 </div>
