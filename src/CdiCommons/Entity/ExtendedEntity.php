@@ -14,7 +14,7 @@ class ExtendedEntity extends \CdiCommons\Entity\AbstractEntity {
    /**
      * 
      * @ORM\ManyToOne(targetEntity="CdiUser\Entity\User")
-     * @ORM\JoinColumn(name="last_updated_by", referencedColumnName="id")
+     * @ORM\JoinColumn(name="created_by", referencedColumnName="id")
      * @Annotation\Exclude()
      */
     protected $createdBy;
