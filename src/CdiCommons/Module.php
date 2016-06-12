@@ -21,6 +21,13 @@ class Module {
     public function onBootstrap(\Zend\Mvc\MvcEvent $mvcEvent) {
         
     }
+    
+    
+    
+    public function getServiceConfig() {
+            return include __DIR__ . '/../../config/services.config.php';
+    }
+
 
 
 
