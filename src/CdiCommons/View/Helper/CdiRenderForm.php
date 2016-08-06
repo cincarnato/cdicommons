@@ -10,7 +10,7 @@ use Zend\ServiceManager\ServiceLocatorInterface;
  *
  * @author cincarnato
  */
-class CdiFormElement extends AbstractHelper {
+class CdiRenderForm extends AbstractHelper {
 
     public function __invoke($templateForm, $templateElement) {
 
