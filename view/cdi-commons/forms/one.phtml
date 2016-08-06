@@ -1,0 +1,18 @@
+<?php
+$form = $this->form;
+$form->prepare();
+?>
+<?php echo $this->form()->openTag($form); ?>
+<?php foreach ($form as $element) : ?>
+    <?php if ($element->getAttribute('type') == "hidden"): ?>
+        <?php echo $this->formElement($element); ?>
+    <?php elseif ($element->getAttribute('type') == "submit"): ?>
+        <?php echo $this->formElement($element); ?>
+        <?php else: ?>
+        <div class="col-lg-12 col-md-12 col-xs-12">
+        <?php echo $this->partial($this->partialElement, array("element" => $element)); ?>
+        </div>
+    <?php endif; ?>
+<?php endforeach; ?>
+<?php echo $this->form()->closeTag($form); ?>
+
